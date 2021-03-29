@@ -1,4 +1,4 @@
-package br.ucsal;
+package br.ucsal.view;
 public class ValorSeq{
 	Cinema sala;
 	public ValorSeq(Cinema sala){

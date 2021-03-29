@@ -1,11 +1,12 @@
-package br.ucsal;
+package br.ucsal.view;
 
 import java.util.Scanner;
+import br.ucsal.negocio.Negocio;
 
-public class Principal {
+public class Console {
 	public static void main(String[] args) {
-		Final cine = null;
 		Scanner scan = new Scanner(System.in);
+		Negocio cine = new Negocio();
 		Cinema esp = new Cinema();
 		int v1 = 0;
 		int v2 = 0;
@@ -27,7 +28,9 @@ public class Principal {
 		esp.setIngressoA(v1);
 		esp.setIngressoB(v2);
 		esp.CriarAssentos();
-		esp.imprimir();
+		esp.setUni(new ValorSeq(esp));
+		cine.setSala(esp);
+		cine.imprimir();
 		while(opcao != 0) {
 			System.out.println("\n" + "1. EXIBIR LUGARES" +
 					"\n" + "2. COMPAR INGRESSO" + 
@@ -43,7 +46,7 @@ public class Principal {
 				System.out.println("FATURAMENTO FECHADO: " + esp.TotalFaturado());
 			}
 			else if(opcao == 1) {
-				esp.imprimir();
+				cine.imprimir();
 			}
 			else if(opcao == 2) {	
 				System.out.print("Digite o numero da fila: " + "\n>");
@@ -55,9 +58,9 @@ public class Principal {
 					System.exit(0);
 				}
 				System.out.print("Valor do ingreço:" + "\n>");
-				cine = new Final(esp, v3, vf);
-				System.out.println("R$" + cine.CineVaga());
-				cine.CineLugar();
+				cine = new Negocio(esp, v3, vf);
+				System.out.println("R$" + cine.cineVaga());
+				cine.cineLugar();
 
 			}else if(opcao == 0){
 				opcao = 0;
