@@ -1,4 +1,7 @@
 package br.ucsal.view;
+
+import br.ucsal.model.Cinema;
+
 public class ValorSeq{
 	Cinema sala;
 	public ValorSeq(Cinema sala){

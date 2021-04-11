@@ -1,6 +1,8 @@
 package br.ucsal.view;
 
 import java.util.Scanner;
+
+import br.ucsal.model.Cinema;
 import br.ucsal.negocio.Negocio;
 
 public class Console {

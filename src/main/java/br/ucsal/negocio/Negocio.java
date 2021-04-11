@@ -1,6 +1,6 @@
 package br.ucsal.negocio;
 
-import br.ucsal.view.Cinema;
+import br.ucsal.model.Cinema;
 
 public class Negocio {
 	private Cinema sala;
